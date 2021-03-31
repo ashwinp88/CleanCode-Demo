@@ -23,6 +23,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04. Persistence", "04. Pers
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05. Shared", "05. Shared", "{E144A509-8751-4563-B9F9-2C822B3DECCD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{EA024C1E-DD64-4E21-9C75-C2D4EEA3627C}"
+	ProjectSection(SolutionItems) = preProject
+		Shared\Images\structure.png = Shared\Images\structure.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +64,7 @@ Global
 		{CBA83C10-ACE6-4032-BAE6-D57DDE7CC0F5} = {7CEE3663-A09E-4243-8B54-48A0DCF0CBF3}
 		{1287944C-7400-45BE-8F0E-FECE6B9F105D} = {0933F46C-A753-4EC4-A8F1-5039634B4B23}
 		{A682F288-A8A6-49B2-9BE1-E2D2B8281B10} = {5F076735-DE4A-48F0-BE8F-EBF8ECAF3ECE}
+		{EA024C1E-DD64-4E21-9C75-C2D4EEA3627C} = {E144A509-8751-4563-B9F9-2C822B3DECCD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F1D8B6A6-1D21-42B5-86A9-514BA6475954}
