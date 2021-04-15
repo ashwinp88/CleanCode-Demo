@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Shared;
+using AwesomeApplication.Domain;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -9,11 +9,11 @@ namespace DataStore.Controllers
     [ApiController]
     public class PeopleController : ControllerBase
     {
-        public static IEnumerable<Person> _people = new List<Person>()
+        private static IEnumerable<Person> _people = new List<Person>()
         {
-            new Person() {Id = 1, FirstName = "Bruce", LastName = "Banner"},
-            new Person() {Id = 2, FirstName = "Peter", LastName = "Parker"},
-            new Person() {Id = 3, FirstName = "Natasha", LastName = "Romanov"}
+            new Person() {Id = 1, FirstName = "Bruce", LastName = "Banner", StartDate = new System.DateTime(2021, 1, 1), EndDate = new System.DateTime(2021, 6, 30)},
+            new Person() {Id = 2, FirstName = "Peter", LastName = "Parker", StartDate = new System.DateTime(2021, 7, 1), EndDate = new System.DateTime(2021, 12, 31)},
+            new Person() {Id = 3, FirstName = "Natasha", LastName = "Romanov", StartDate = new System.DateTime(2021, 1, 1), EndDate = new System.DateTime(2021, 12, 31)}
         };
 
         [HttpGet]
@@ -27,5 +27,8 @@ namespace DataStore.Controllers
         {
             return _people.FirstOrDefault(p => p.Id == Id);
         }
+
+       
+
     }
 }

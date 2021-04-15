@@ -1,0 +1,27 @@
+﻿@page
+@model PeopleModel
+@{
+    ViewData["Title"] = "Awesome Application";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">This is an Awesome Application</a>.</p>
+</div>
+<table>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+    </tr>
+    @foreach (var person in Model.People)
+    {
+        <tr>
+            <td>@person.FirstName</td>
+            <td>@person.LastName</td>
+            <td>@person.StartDate.ToShortDateString()</td>
+            <td>@person.EndDate.ToShortDateString()</td>
+        </tr>
+    }
+</table>

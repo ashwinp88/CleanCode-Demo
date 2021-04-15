@@ -1,0 +1,23 @@
+﻿@page
+@model WebUI.Pages.TasksModel
+@{
+    ViewData["Title"] = "Awesome Application";
+}
+
+<table>
+    <tr>
+        <th>Task Description</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Assignee</th>
+    </tr>
+    @foreach (var task in Model.Tasks)
+    {
+<tr>
+    <td>@task.Descrption</td>
+    <td>@task.StartDate.ToShortDateString()</td>
+    <td>@task.EndDate.ToShortDateString()</td>
+    <td>@($"{task.AssignedPerson?.FirstName} {task.AssignedPerson?.LastName}")</td>
+</tr>
+    }
+</table>
